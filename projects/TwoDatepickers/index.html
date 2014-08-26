@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TwoDatepickers</title>
+    <!--TODO: change to mini libraries!!!before release-->
+    <link rel="stylesheet" href="../../components/bootstrap-css-only/css/bootstrap.css"/>
+    <script src="../../components/angular/angular.js"></script>
+    <script src="../../components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="../../components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="well">
+        <h1>Choose your dates</h1>
+
+    <form class="form-inline" role="form">
+        <div class="form-group">
+
+            <div class="input-group">
+                <label class="sr-only" for="pickUpDate">Pick up date:</label>
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+
+            <div class="input-group">
+                <label class="sr-only" for="dropOffDate">Drop off date:</label>
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon">@</div>
+                <input class="form-control" placeholder="Enter email" class="col-xs-3" type="email"/>
+            </div>
+        </div>
+
+
+        <button class="btn btn-success" ng-click="" type="submit">Send</button>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Receive our newsletter with hottest deals.
+            </label>
+        </div>
+    </form>
+    </div>
+</div>
+
+</body>
+</html>
