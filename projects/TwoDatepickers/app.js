@@ -36,8 +36,5 @@
                 console.log(this.startDate + "\n" + this.endDate + "\n" + this.email + "\n" + this.sendNewsletter)
             }else(console.log("form invalid"))
         }
-
-
     }
-
 })(window, angular);
