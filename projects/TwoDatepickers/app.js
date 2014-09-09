@@ -32,7 +32,9 @@
             this.opened2 = true;
         }
         this.sendBtnClicked = function () {
-            console.log(this.startDate + "\n" + this.endDate + "\n" + this.email + "\n" + this.sendNewsletter)
+            if(this.offerForm.$valid) {
+                console.log(this.startDate + "\n" + this.endDate + "\n" + this.email + "\n" + this.sendNewsletter)
+            }else(console.log("form invalid"))
         }
 
 
