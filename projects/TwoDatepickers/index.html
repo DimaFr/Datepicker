@@ -12,7 +12,7 @@
 
 </head>
 <style>
-     *:focus{
+    *:focus {
         /*border-color: none;*/
         /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);*/
         outline: 0 none;
@@ -23,52 +23,57 @@
     <div class="well">
         <h1>Choose your dates</h1>
 
-    <form class="form-inline" role="form">
-        <div class="form-group">
+        <form class="form-inline" role="form">
+            <div class="form-group">
 
-            <div class="input-group">
-                <label class="sr-only" for="pickUpDate">Pick up date:</label>
-                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="picker.startDate"
-                       is-open="picker.opened1" min-date="picker.minDate" max-date="picker.endDate"
-                       show-button-bar="false"
-                       datepicker-options="picker.dateOptions"  date-disabled="disabled(date, mode)"  ng-required="true" close-text="Close" />
+                <div class="input-group">
+                    <label class="sr-only" for="pickUpDate">Pick up date:</label>
+                    <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="picker.startDate"
+                           is-open="picker.opened1" min-date="picker.minDate" max-date="picker.endDate"
+                           show-button-bar="false"
+                           datepicker-options="picker.dateOptions" date-disabled="disabled(date, mode)"
+                           ng-required="true" close-text="Close"/>
               <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="picker.open1($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                <button type="button" class="btn btn-default" ng-click="picker.open1($event)"><i
+                        class="glyphicon glyphicon-calendar"></i></button>
               </span>
+                </div>
             </div>
-        </div>
 
 
-        <div class="form-group">
-            <div class="input-group">
-                <label class="sr-only" for="dropOffDate">Drop off date:</label>
-                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="picker.endDate"
-                       is-open="picker.opened2" min-date="picker.startDate" max-date="'2015-06-22'"
-                       show-button-bar="false"
+            <div class="form-group">
+                <div class="input-group">
+                    <label class="sr-only" for="dropOffDate">Drop off date:</label>
+                    <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="picker.endDate"
+                           is-open="picker.opened2" min-date="picker.startDate" max-date="'2015-06-22'"
+                           show-button-bar="false"
 
-                       datepicker-options="picker.dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                           datepicker-options="picker.dateOptions" date-disabled="disabled(date, mode)"
+                           ng-required="true" close-text="Close"/>
               <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="picker.open2($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                <button type="button" class="btn btn-default" ng-click="picker.open2($event)"><i
+                        class="glyphicon glyphicon-calendar"></i></button>
               </span>
+                </div>
             </div>
-        </div>
 
 
-        <div class="form-group">
-            <div class="input-group">
-                <div class="input-group-addon">@</div>
-                <input class="form-control" placeholder="Enter email" class="col-xs-3" type="email"/>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">@</div>
+                    <input ng-model="picker.email" class="form-control" placeholder="Enter email" class="col-xs-3"
+                           type="email" ng-required="true"/>
+                </div>
             </div>
-        </div>
 
 
-        <button class="btn btn-success" ng-click="" type="submit">Send</button>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"> Receive our newsletter with hottest deals.
-            </label>
-        </div>
-    </form>
+            <button class="btn btn-success" ng-click="picker.sendBtnClicked()" type="submit">Send</button>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="picker.sendNewsletter"> Receive our newsletter with hottest deals.
+                </label>
+            </div>
+        </form>
     </div>
 </div>
 
